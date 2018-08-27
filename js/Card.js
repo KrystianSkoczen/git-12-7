@@ -8,12 +8,9 @@ function Card(id, name) {
         description: this.name
     }, 'li');
 
-    this.element.querySelector('.card').addEventListener('click', function(event) {
-        event.stopPropagation();
-
-        if (event.target.classList.contains('btn-delete')) {
-            self.removeCard();
-        }
+    this.element.querySelector('.btn-delete').addEventListener('click', function(event) {
+                    self.removeCard();
+        
     });
 }
 Card.prototype = {
