@@ -31,7 +31,7 @@
     "build:rimraf": "rimraf -r css",
     "watch": "npm-run-all watch:*",
     "watch:sassprefixer": "onchange -d 100 ./sass/*.scss -- npm-run-all -s build:sass build:autoprefixer",
-    "watch:browsersync": "node_modules/.bin/browser-sync start --server"
+    "watch:browsersync": "browser-sync start --server --files 'css/*.css' '*.html'"
   },
   "repository": {
     "type": "git",
